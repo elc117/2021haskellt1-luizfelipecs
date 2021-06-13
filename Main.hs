@@ -61,15 +61,26 @@ genTriangle n = [((m*(gap/(m+1)),0.0),(gap*2-m*(gap/(m+1)),0.0),(gap,(gap+gap/2)
 -------------------------------------------------------------------------------
 --genTrapeze n = [((0,0), (50,50), (150,50), (200,0)) | m <- [0..fromIntegral (n-1)]]
 
-genTrapeze :: Int -> [Trapeze]
-genTrapeze n = [((inicioX,inicioY), (inicioX + base/4,inicioY+h), (inicioX+(base*3/4),inicioY+h), (inicioX + base,inicioY)) | m <- [0..fromIntegral (n-1)]]
-  where inicioX = 350
-        inicioY = 700
-        base    = 500
-        h       = 125
+genTrapeze :: Float -> Float -> Float -> Int -> [Trapeze]
+genTrapeze inicioX inicioY base n = [((inicioX,inicioY), (inicioX + base/4,inicioY+h), (inicioX+(base*3/4),inicioY+h), (inicioX + base,inicioY)) | m <- [0..fromIntegral (n-1)]]
+  where h = base/4
 
 
+verificaTurno :: String -> [(Int,Int,Int)]
+verificaTurno str 
+  | str == "meio-dia" = head (tail rgbPaletteSky2) : []
+  | str == "tarde"    = head (tail (tail rgbPaletteSky2)) :[]
+  | str == "noite"    = last rgbPaletteSky2 : []
+  | otherwise         = head rgbPaletteSky2 : []
 
+
+verificaSol :: String  -> [(Int,Int,Int)]
+verificaSol str 
+  | str == "manha"    = head rgbPaletteSun2 : []
+  | str == "meio-dia" = head (tail rgbPaletteSun2) :[]
+  | str == "tarde"    = last rgbPaletteSun2 : []
+  | otherwise         = rgbPaletteMoon
+  
 -------------------------------------------------------------------------------
 -- Função principal que gera arquivo com imagem SVG --  CORRIGIR
 -------------------------------------------------------------------------------
@@ -78,6 +89,8 @@ main = do
   
   putStrLn "Digite o turno do dia em que o navio esta navegando (manha, meio-dia, tarde ou noite): "
   turno <- getLine
+  putStrLn turno
+  
   {-
   verificaTurno turno, otherwise manha
   
@@ -85,9 +98,9 @@ main = do
   -}
 
   putStrLn "Digite o tamanho da base do navio (base menor de um trapezio): "
-  base <- getLine
+  --base <- getLine
   putStrLn "Digite a posicao do navio (x,y) (Aposicao se refere ao ponto mais a esquerda da base maior do trapezio): "
-  (x,y) <- getLine
+  --(x,y) <- getLine
   putStrLn "Digite a cor principal do navio no formato rgb"
   putStrLn "Digite a cor secundaria do navio no formato rgb"
 
@@ -100,22 +113,22 @@ main = do
   where svgstrs   = svgBegin w h ++ svgsky ++ svgsun ++ svgsea ++ svgfigs ++ svgEnd
         
         svgfigs   = svgElements svgTrapeze trapeze (map svgStyleTrapeze palette) 
-        trapeze   = genTrapeze ntrapeze
+        trapeze   = genTrapeze 200 600 250 ntrapeze
         palette   = rgbPalette ntrapeze
         ntrapeze  = 1
 
         svgsky    = svgElements svgRect sky (map svgStyleRect palette2)
         sky       = genSky nrect
-        palette2  = rgbPaletteSky nrect
-        nrect     = 3
+        palette2  = verificaTurno "noite"
+        nrect     = 1
 
         svgsun    = svgElements svgCircle sun (map svgStyleCircle palette3)
         sun       = genSun 1
-        palette3  = rgbPaletteSun 3
+        palette3  = verificaSol "noite"
 
         svgsea    = svgElements svgRect sea (map svgStyleRect palette4)
         sea       = genSea 1
-        palette4  = rgbPaletteSea 1
+        palette4  = rgbPaletteSea 
         
         (w,h) = (1000,1000)
       
