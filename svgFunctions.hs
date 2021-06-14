@@ -14,7 +14,7 @@ type Trapeze  = (Point,Point,Point,Point)
 -- dadas coordenadas e dimensões do retângulo e uma string com atributos de estilo
 svgRect :: Rect -> String -> String
 svgRect ((x,y),w,h) style = 
-  printf "<rect x='%.3f' y='%.3f' width='%.2f' height='%.2f' style='%s' />\n" x y w h style
+  printf "<rect x='%.3f' y='%.3f' width='%.2f' height='%.2f' style='%s' stroke-width='1' stroke='black' />\n" x y w h style
 
 -- Gera string representando circulo SVG
 svgCircle :: Circle -> String -> String 

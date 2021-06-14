@@ -1,6 +1,10 @@
 <svg width='1000.00' height='1000.00' xmlns='http://www.w3.org/2000/svg'>
-<rect x='0.000' y='0.000' width='1000.00' height='500.00' style='fill:rgb(28,28,28);' />
-<circle cx='500.000' cy='80.000' r='75.000' fill='rgb(220,220,220)' stroke='black' stroke-width='3'/>
-<rect x='0.000' y='500.000' width='1000.00' height='500.00' style='fill:rgb(25,25,112);' />
-<polygon points = '200.000,600.000 262.500,662.500 387.500,662.500 450.000,600.000' style='fill:rgb(155,0,0); stroke-width:1; stroke:rgb(0,0,0);' />
+<rect x='0.000' y='0.000' width='1000.00' height='500.00' style='fill:rgb(28,28,28);' stroke-width='1' stroke='black' />
+<circle cx='-50.000' cy='260.000' r='60.000' fill='rgb(220,220,220)' stroke='black' stroke-width='3'/>
+<rect x='0.000' y='500.000' width='1000.00' height='500.00' style='fill:rgb(25,25,112);' stroke-width='1' stroke='black' />
+<polygon points = '100.000,700.000 162.500,762.500 287.500,762.500 350.000,700.000' style='fill:rgb(155,0,0); stroke-width:1; stroke:rgb(0,0,0);' />
+<rect x='100.000' y='675.000' width='25.00' height='25.00' style='fill:rgb(255,0,0);' stroke-width='1' stroke='black' />
+<rect x='135.000' y='675.000' width='25.00' height='25.00' style='fill:rgb(0,255,0);' stroke-width='1' stroke='black' />
+<rect x='170.000' y='675.000' width='25.00' height='25.00' style='fill:rgb(0,0,255);' stroke-width='1' stroke='black' />
+<rect x='205.000' y='675.000' width='25.00' height='25.00' style='fill:rgb(255,255,0);' stroke-width='1' stroke='black' />
 </svg>
