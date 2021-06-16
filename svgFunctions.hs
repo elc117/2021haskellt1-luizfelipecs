@@ -4,7 +4,6 @@ import Text.Printf
 type Point    = (Float,Float)
 type Circle   = (Point,Float)
 type Rect     = (Point,Float,Float)
-type Triangle = (Point,Point,Point)
 type Trapeze  = (Point,Point,Point,Point)
 
 -------------------------------------------------------------------------------
@@ -20,11 +19,6 @@ svgRect ((x,y),w,h) style =
 svgCircle :: Circle -> String -> String 
 svgCircle ((x,y),r) style = 
   printf "<circle cx='%.3f' cy='%.3f' r='%.3f' fill='%s' stroke='black' stroke-width='3'/>\n" x y r style
-
--- Gera string representando triângulo SVG
-svgTriangle :: Triangle -> String -> String
-svgTriangle ((x1,y1),(x2,y2),(x3,y3)) style =
-  printf "<polygon points = '%.3f,%.3f %.3f,%.3f %.3f,%.3f' style='%s' />\n" x1 y1 x2 y2 x3 y3 style
 
 -- Gera string representando trapézio SVG
 svgTrapeze :: Trapeze -> String -> String
@@ -46,9 +40,6 @@ svgStyleRect (r,g,b) = printf "fill:rgb(%d,%d,%d);" r g b
 
 svgStyleCircle :: (Int,Int,Int) -> String
 svgStyleCircle (r,g,b) = printf "rgb(%d,%d,%d)" r g b
-
-svgStyleTriangle :: (Int,Int,Int) -> String
-svgStyleTriangle (r,g,b) = printf "fill:rgb(%d,%d,%d); stroke-width:2; stroke:rgb(0,0,0);" r g b
 
 svgStyleTrapeze :: (Int,Int,Int) -> String
 svgStyleTrapeze (r,g,b) = printf "fill:rgb(%d,%d,%d); stroke-width:1; stroke:rgb(0,0,0);" r g b
