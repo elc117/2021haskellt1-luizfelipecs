@@ -14,15 +14,15 @@ main = do
         --horario do dia (0 a 23)
         clock = 22
         --base do navio (base menor de um trapezio)
-        base = 400
+        base = 250
         --posicao inicial do navio nos eixo x e y (ponto mais a esquerda do trapezio)
-        (posX,posY) = (200,700)
+        (posX,posY) = (150,300)
         --cor do navio
         shipColor    = (255,345,132)
         --numero de containers que o navio carrega
         numContainer = 8
         --tamanho da imagem (largura x altura)
-        (w,h)        = (1000,1000)
+        (w,h)        = (500,500)
 
         --verificação dos valores (se não forem válidos, assumem um  valor padrão)
         clock' = verifyClock clock

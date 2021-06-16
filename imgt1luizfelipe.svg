@@ -1,14 +1,14 @@
-<svg width='1000.00' height='1000.00' xmlns='http://www.w3.org/2000/svg'>
-<rect x='0.000' y='0.000' width='1000.00' height='500.00' style='fill:rgb(28,28,28);' stroke-width='1' stroke='black' />
-<circle cx='692.308' cy='140.000' r='66.667' fill='rgb(220,220,220)' stroke='black' stroke-width='3'/>
-<rect x='0.000' y='500.000' width='1000.00' height='1000.00' style='fill:rgb(25,25,112);' stroke-width='1' stroke='black' />
-<polygon points = '200.000,700.000 300.000,800.000 500.000,800.000 600.000,700.000' style='fill:rgb(255,345,132); stroke-width:1; stroke:rgb(0,0,0);' />
-<rect x='200.000' y='655.556' width='44.44' height='44.44' style='fill:rgb(255,0,0);' stroke-width='1' stroke='black' />
-<rect x='250.000' y='655.556' width='44.44' height='44.44' style='fill:rgb(0,255,0);' stroke-width='1' stroke='black' />
-<rect x='300.000' y='655.556' width='44.44' height='44.44' style='fill:rgb(0,0,255);' stroke-width='1' stroke='black' />
-<rect x='350.000' y='655.556' width='44.44' height='44.44' style='fill:rgb(255,255,0);' stroke-width='1' stroke='black' />
-<rect x='400.000' y='655.556' width='44.44' height='44.44' style='fill:rgb(255,0,0);' stroke-width='1' stroke='black' />
-<rect x='450.000' y='655.556' width='44.44' height='44.44' style='fill:rgb(0,255,0);' stroke-width='1' stroke='black' />
-<rect x='500.000' y='655.556' width='44.44' height='44.44' style='fill:rgb(0,0,255);' stroke-width='1' stroke='black' />
-<rect x='550.000' y='655.556' width='44.44' height='44.44' style='fill:rgb(255,255,0);' stroke-width='1' stroke='black' />
+<svg width='500.00' height='500.00' xmlns='http://www.w3.org/2000/svg'>
+<rect x='0.000' y='0.000' width='500.00' height='250.00' style='fill:rgb(28,28,28);' stroke-width='1' stroke='black' />
+<circle cx='346.154' cy='70.000' r='33.333' fill='rgb(220,220,220)' stroke='black' stroke-width='3'/>
+<rect x='0.000' y='250.000' width='500.00' height='500.00' style='fill:rgb(25,25,112);' stroke-width='1' stroke='black' />
+<polygon points = '150.000,300.000 212.500,362.500 337.500,362.500 400.000,300.000' style='fill:rgb(255,345,132); stroke-width:1; stroke:rgb(0,0,0);' />
+<rect x='150.000' y='272.222' width='27.78' height='27.78' style='fill:rgb(255,0,0);' stroke-width='1' stroke='black' />
+<rect x='181.250' y='272.222' width='27.78' height='27.78' style='fill:rgb(0,255,0);' stroke-width='1' stroke='black' />
+<rect x='212.500' y='272.222' width='27.78' height='27.78' style='fill:rgb(0,0,255);' stroke-width='1' stroke='black' />
+<rect x='243.750' y='272.222' width='27.78' height='27.78' style='fill:rgb(255,255,0);' stroke-width='1' stroke='black' />
+<rect x='275.000' y='272.222' width='27.78' height='27.78' style='fill:rgb(255,0,0);' stroke-width='1' stroke='black' />
+<rect x='306.250' y='272.222' width='27.78' height='27.78' style='fill:rgb(0,255,0);' stroke-width='1' stroke='black' />
+<rect x='337.500' y='272.222' width='27.78' height='27.78' style='fill:rgb(0,0,255);' stroke-width='1' stroke='black' />
+<rect x='368.750' y='272.222' width='27.78' height='27.78' style='fill:rgb(255,255,0);' stroke-width='1' stroke='black' />
 </svg>
